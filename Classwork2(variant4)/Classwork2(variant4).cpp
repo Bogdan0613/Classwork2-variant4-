@@ -25,8 +25,8 @@ void unpair_sum() {
 }
 
 void sum_between_min_max() {
-    int size, min, max;
-    float sum = 0;
+    int size;
+    float sum = 0, min, max;
     cout << "Enter the size of the array:";
     cin >> size;
     float* arr = new float[size];
@@ -73,6 +73,9 @@ void narrow_arr() {
     }
     cout << endl;
     for (int i = 0; i < size; i++) {
+        if (i > counter - 1) {
+            new_arr[i] = 0;
+        }
         cout << "The " << i + 1 << " element of new array:" << new_arr[i] << endl;
+        }
     }
-}
